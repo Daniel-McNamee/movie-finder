@@ -11,11 +11,16 @@ import { MovieapiService } from '../movieapi-service';
 })
 export class SearchComponent {
 
-  title = '';
+title = '';
 
-  constructor(private movieService: MovieapiService) {}
+constructor(private movieService: MovieapiService) {}
 
-  onSubmit() {
-    this.movieService.getMovie(this.title);
-  }
+onSubmit() {
+
+  this.movieService.getMovie(this.title)
+    .subscribe(movie => {
+      this.movieService.setMovie(movie);
+    });
+
+}
 }

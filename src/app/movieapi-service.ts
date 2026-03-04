@@ -12,6 +12,14 @@ export class MovieapiService {
 
   private movie = signal<MovieDetails | null>(null);
 
+  setMovie(movie: MovieDetails) {
+    this.movie.set(movie);
+  }
+
+  movieData() {
+    return this.movie;
+  }
+
   private baseUrl = 'https://www.omdbapi.com/';
   private apiKey = '3dc3e334';
 
@@ -19,14 +27,7 @@ export class MovieapiService {
 
     const url = `${this.baseUrl}?apikey=${this.apiKey}&t=${title}`;
 
-    this.http.get<MovieDetails>(url)
-      .pipe(take(1))
-      .subscribe(data => {
-        this.movie.set(data);
-      });
-  }
+    return this.http.get<MovieDetails>(url).pipe(take(1));
 
-  movieData() {
-    return this.movie;
   }
 }
