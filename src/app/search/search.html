@@ -1,14 +1,23 @@
-<form (ngSubmit)="onSubmit()" class="mb-4">
-  <div class="input-group">
-    <input 
-      type="text" 
-      class="form-control" 
-      [(ngModel)]="title" 
-      name="title"
-      placeholder="Enter movie title"
-      required>
-    <button class="btn btn-primary" type="submit">
-      Search
-    </button>
-  </div>
-</form>
+<div class="container mt-5 text-center">
+
+  <form (ngSubmit)="onSubmit()" class="d-flex justify-content-center">
+
+    <div class="input-group input-group-lg" style="max-width:600px;">
+
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="title"
+        name="title"
+        placeholder="Search for a movie..."
+        required>
+
+      <button class="btn btn-danger">
+        Search
+      </button>
+
+    </div>
+
+  </form>
+
+</div>

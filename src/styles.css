@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #141414;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+}
+
+.movie-card {
+  background-color: #0077ff95;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.poster {
+  max-height: 420px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.text-muted {
+  color: #bbbbbb !important;
+}
+
+.movie-card {
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+input.form-control {
+  border-radius: 8px 0 0 8px;
+}
+
+button.btn-danger {
+  border-radius: 0 8px 8px 0;
+}
+
+.input-group input {
+  padding: 10px;
+}
+
+.input-group button {
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.top-bar {
+  background: #1f4f8b;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  border-bottom: 3px solid #2365af9e;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
